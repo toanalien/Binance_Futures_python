@@ -30,5 +30,21 @@ class Candlestick:
         result.takerBuyBaseAssetVolume = val[9]
         result.takerBuyQuoteAssetVolume = val[10]
         result.ignore = val[11]
-  
+
         return result
+
+    def to_dict(self):
+        return {
+            'openTime': self.openTime,
+            'open': self.open,
+            'high': self.high,
+            'low': self.low,
+            'close': self.close,
+            'volume': self.volume,
+            'closeTime': self.closeTime,
+            'quoteAssetVolume': self.quoteAssetVolume,
+            'numTrades': self.numTrades,
+            'takerBuyBaseAssetVolume': self.takerBuyBaseAssetVolume,
+            'takerBuyQuoteAssetVolume': self.takerBuyQuoteAssetVolume,
+            'ignore': self.ignore
+        }
